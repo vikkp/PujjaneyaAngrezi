@@ -1,0 +1,9 @@
+{
+  "name": "Pujjaneya Angrezi",
+  "short_name": "Angrezi",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f2319",
+  "theme_color": "#1a3a2a",
+  "lang": "hi"
+}
