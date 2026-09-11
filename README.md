@@ -2,32 +2,16 @@
 
 Hindi speakers who already know words and short sentences, but freeze in conversation.
 
-The site is a single static app: ten spoken-paragraph lessons, Hindi support lines, XP, a streak, and a garden picture that unlocks with each completed lesson. Built for Safari on iPhone.
+Live: https://pujjaneyaangrezi.pandey-vikash.workers.dev
 
-## Local
+Fifteen lessons on the path:
+- 10 conversation paragraphs (meet, shop, help, work, phone, clinic, neighbor, weather, day, opinion)
+- 5 Wren and Martin compound-sentence chapters (and / but-yet / or-nor / so-for / mixed) — 40 join-the-sentence drills
 
-Open `index.html` in a browser, or:
+XP, streak, and a garden picture that unlocks with each lesson. Built for Safari on iPhone.
 
-```
-npx wrangler dev
-```
-
-## Cloudflare Worker / Pages
-
-Recommended: **Cloudflare Pages** pointed at this GitHub repo (root, no build command). You get `*.pages.dev` and can attach a Worker later.
-
-Workers + Assets:
+## Deploy
 
 ```
 npx wrangler deploy
 ```
-
-That uses `wrangler.toml` (`assets.directory = "."`) so `worker.js` serves the static files on `*.workers.dev`.
-
-## iPhone
-
-Safari → Share → Add to Home Screen.
-
-Speech playback uses the Web Speech API after a tap (required on iOS).
-
-Progress is stored in `localStorage` on the device.
