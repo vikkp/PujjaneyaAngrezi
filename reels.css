@@ -1,0 +1,18 @@
+.reels-body { margin: 0; background: #0b1a12; height: 100dvh; overflow: hidden; }
+.feed { height: 100dvh; overflow-y: scroll; scroll-snap-type: y mandatory; scroll-snap-stop: always; -webkit-overflow-scrolling: touch; }
+.slide { height: 100dvh; scroll-snap-align: start; display: grid; place-items: center; padding: calc(56px + env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom)); }
+.flip { width: min(92vw, 420px); height: min(72dvh, 560px); perspective: 1200px; }
+.flip inner { display: block; width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.flip.on inner { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 28px; padding: 28px 22px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,.08); }
+.front { background: linear-gradient(160deg, #1d4030, #12291e); }
+.back { background: linear-gradient(160deg, #2a4a22, #1a3320); transform: rotateY(180deg); }
+.kicker { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #e8b84a; font-weight: 800; }
+.line { font-family: Fraunces, serif; font-size: clamp(26px, 7vw, 36px); line-height: 1.25; margin: 16px 0; }
+.hi { color: #e8b84a; font-size: 18px; line-height: 1.45; }
+.meta { color: #c9d5cc; font-size: 14px; }
+.hint-tap { font-size: 13px; color: #c9d5cc; opacity: .8; }
+.say { width: 52px; height: 52px; border: 0; border-radius: 16px; background: #244c38; color: #f4efe4; font-size: 22px; }
+.end .face { background: linear-gradient(160deg, #3a2a12, #1a1408); }
+.reels-chrome { position: fixed; top: env(safe-area-inset-top); left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; pointer-events: none; z-index: 3; }
+.ghost-link, .reel-count { pointer-events: auto; background: #163326cc; color: #f4efe4; text-decoration: none; border-radius: 999px; padding: 8px 12px; font-weight: 800; font-size: 13px; }
